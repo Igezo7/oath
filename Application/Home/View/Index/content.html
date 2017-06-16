@@ -41,4 +41,31 @@
     </div>
 </body>
 <script src="__PUBLIC__/js/content.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="http://hongyan.cqupt.edu.cn/wx-api/share.js"></script>
+<script src="__PUBLIC__/js/share.js"></script>
+<script>
+
+    wx.config({debug: true});
+    wx.ready(function() {
+        var option = {
+            title: "亲，快来生成你的入党誓词名片吧！以青春的名义，重温入团誓词！",
+            link: "http://wx.cqqsh.org.cn/oath/",
+            imgUrl: "__PUBLIC__/img/index.jpg",
+            desc: "我们是五月的花海 用青春拥抱时代 我们是初升的太阳 用生命点燃未来！",
+            type: "",
+            success: function() {
+                console.log('分享成功');
+            },
+            cancel: function() {
+                console.log('取消分享');
+            }
+        };
+        wx.onMenuShareTimeline(option);
+        wx.onMenuShareAppMessage(option);
+        wx.onMenuShareQQ(option);
+        wx.onMenuShareWeibo(option);
+        wx.onMenuShareQZone(option);
+    });
+</script>
 </html>

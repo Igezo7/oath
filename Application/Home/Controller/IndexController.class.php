@@ -2,7 +2,7 @@
 namespace Home\Controller;
 use Think\Controller;
 class IndexController extends Controller {
-    private $src = './Public/material/model2.jpg';
+    private $src = './Public/material/model.jpg';
     private $image;
     private $info;
 
