@@ -7,6 +7,9 @@ class IndexController extends Controller {
     private $info;
 
     public function index(){
+        $wxconfig = wx_share_init();
+
+        $this->assign('wxconfig', $wxconfig);
     $this->display('index');
 }
 
@@ -28,6 +31,10 @@ class IndexController extends Controller {
     }
 
     public function show($text){
+        $wxconfig = wx_share_init();
+
+        $this->assign('wxconfig', $wxconfig);
+
         $time = time();
     header('content-type:' . $this -> info['mime'].';charset=utf-8');
     $fun='image' . $this->info['type'];

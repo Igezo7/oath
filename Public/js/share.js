@@ -1,6 +1,7 @@
 /**
  * Created by igezo on 2017/6/16.
  */
+
 wx.config({
     appId: 'wx07b5bba626c00d2c',  //公众号的 appID
     timestamp: '<?php echo $wx["timestamp"];?>',  //生成签名的时间戳
